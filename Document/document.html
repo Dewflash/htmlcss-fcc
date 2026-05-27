@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Documentation</title>
+  <link rel="stylesheet" href="docstyles.css" />
+</head>
+<body>
+
+  <nav id="navbar">
+    <header>CSS Reference</header>
+    <a class="nav-link" href="#Selectors">Selectors</a>
+    <a class="nav-link" href="#Box_Model">Box Model</a>
+    <a class="nav-link" href="#Flexbox">Flexbox</a>
+    <a class="nav-link" href="#Positioning">Positioning</a>
+    <a class="nav-link" href="#Visual_Effects">Visual Effects</a>
+  </nav>
+
+  <main id="main-doc">
+
+    <section class="main-section" id="Selectors">
+      <header>Selectors</header>
+      <p>CSS selectors are patterns used to target HTML elements for styling. They are the "who" in any CSS rule.</p>
+      <p>Every CSS rule starts with a selector followed by a declaration block containing properties and values.</p>
+      <p>Basic selectors include the type selector, class selector, ID selector, and the universal selector.</p>
+      <p>The type selector targets elements by tag name. The class selector uses a dot prefix, and the ID selector uses a hash.</p>
+      <p>Attribute selectors allow you to target elements based on the presence or value of their HTML attributes.</p>
+      <p>Combinators define the relationship between selectors. There are four: descendant, child, adjacent sibling, and general sibling.</p>
+      <p>Pseudo-classes target elements based on state or position, such as hover, focus, or nth-child.</p>
+      <p>Pseudo-elements target virtual parts of an element, such as the first letter or generated content before and after.</p>
+      <code>p { color: red; }</code>
+      <code>.card { padding: 1rem; }</code>
+      <code>#navbar { position: fixed; }</code>
+      <p>Specificity determines which rule wins when multiple selectors target the same element. IDs beat classes, classes beat types.</p>
+      <p>The cascade resolves conflicts using specificity, inheritance, and source order as tiebreakers.</p>
+      <ul>
+        <li><code>[class~="word"]</code> — matches a whole word in a class list</li>
+        <li><code>[class*="sub"]</code> — matches any substring in the value</li>
+        <li><code>[class^="start"]</code> — matches values that start with the string</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="Box_Model">
+      <header>Box Model</header>
+      <p>Every HTML element is a rectangular box made of four layers: content, padding, border, and margin.</p>
+      <p>The content area holds the actual text or images. Padding adds space between the content and the border.</p>
+      <p>The border wraps around the padding. The margin is the outermost layer, separating the element from its neighbours.</p>
+      <p>By default, width and height only apply to the content area. This is called content-box sizing.</p>
+      <p>Setting box-sizing to border-box makes width and height include padding and border, which is easier to work with.</p>
+      <p>Margin collapse occurs when the vertical margins of adjacent elements merge into a single margin equal to the largest value.</p>
+      <p>Overflow controls what happens when content is larger than its container. Options include visible, hidden, scroll, and auto.</p>
+      <code>* { box-sizing: border-box; }</code>
+      <code>div { margin: 0 auto; padding: 1rem; }</code>
+      <ul>
+        <li>Padding shorthand order: top, right, bottom, left</li>
+        <li>Margin collapse only affects vertical (top/bottom) margins</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="Flexbox">
+      <header>Flexbox</header>
+      <p>Flexbox is a one-dimensional layout model that arranges elements along a single axis, either a row or a column.</p>
+      <p>The flex container is the parent element with display: flex applied. Its direct children become flex items.</p>
+      <p>The main axis is the primary direction items flow. The cross axis runs perpendicular to it.</p>
+      <p>justify-content controls spacing and alignment along the main axis. align-items controls alignment on the cross axis.</p>
+      <p>flex-wrap controls whether items stay on one line or wrap to the next when they exceed the container width.</p>
+      <p>align-self can be applied to individual flex items to override the container's align-items setting.</p>
+      <p>The flex shorthand sets flex-grow, flex-shrink, and flex-basis in one declaration.</p>
+      <code>display: flex;</code>
+      <code>justify-content: space-between;</code>
+      <code>align-items: center;</code>
+      <ul>
+        <li>flex-start — aligns items to the start of the axis</li>
+        <li>space-evenly — equal space between and around all items</li>
+        <li>flex-wrap: wrap — allows items to move to new lines</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="Positioning">
+      <header>Positioning</header>
+      <p>CSS positioning controls where elements are placed on the page and how they interact with surrounding elements.</p>
+      <p>Static is the default. Elements follow normal document flow from top to bottom and left to right.</p>
+      <p>Relative positions an element relative to its original place. It still occupies its original space in the flow.</p>
+      <p>Absolute removes an element from the flow. It is positioned relative to its nearest positioned ancestor.</p>
+      <p>Fixed removes an element from the flow and pins it to the viewport. It stays visible while the page scrolls.</p>
+      <p>Sticky is a hybrid. The element acts as relative until it hits a scroll threshold, then becomes fixed.</p>
+      <p>Z-index controls the stacking order of elements. Higher values appear on top. It only works on positioned elements.</p>
+      <p>Floats move elements left or right, allowing content to wrap around them. Clear prevents overlap with floated elements.</p>
+      <code>position: absolute; top: 0; left: 0;</code>
+      <ul>
+        <li>z-index only works on elements with a position other than static</li>
+        <li>Sticky requires a defined top, bottom, left, or right value</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="Visual_Effects">
+      <header>Visual Effects</header>
+      <p>CSS provides a range of properties to create visual effects without the need for images or JavaScript.</p>
+      <p>The filter property applies effects like blur, brightness, contrast, grayscale, sepia, and hue-rotate to elements.</p>
+      <p>The transform property enables 2D and 3D manipulations including translate, scale, rotate, and skew.</p>
+      <p>Gradients create smooth color transitions. Linear gradients go along a straight line; radial gradients radiate from a point.</p>
+      <p>The border-radius property rounds the corners of an element. A value of 50% on a square creates a perfect circle.</p>
+      <p>Box-shadow adds a shadow effect behind an element. It accepts horizontal offset, vertical offset, blur, spread, and color.</p>
+      <p>The outline property draws a line outside the border without affecting layout. It is commonly used for focus indicators.</p>
+      <code>filter: blur(4px);</code>
+      <code>

@@ -1,0 +1,123 @@
+:root {
+  --bg: #f7f6f2;
+  --nav-bg: #1c1c1e;
+  --nav-width: 260px;
+  --accent: #e85a2a;
+  --text: #1c1c1e;
+  --muted: #6b6b6b;
+  --code-bg: #edeae3;
+  --border: #ddd9d0;
+  font-family: 'Georgia', serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ── Navbar ── */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--nav-width);
+  height: 100vh;
+  background: var(--nav-bg);
+  padding: 2rem 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#navbar header {
+  color: var(--accent);
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0 1.5rem 1.5rem;
+  border-bottom: 1px solid #333;
+  margin-bottom: 0.5rem;
+}
+
+.nav-link {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  padding: 0.65rem 1.5rem;
+  font-size: 0.92rem;
+  border-left: 3px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #fff;
+  background: #2a2a2c;
+  border-left-color: var(--accent);
+}
+
+/* ── Main content ── */
+#main-doc {
+  margin-left: var(--nav-width);
+  padding: 3rem 4rem;
+  max-width: 860px;
+  line-height: 1.75;
+}
+
+.main-section {
+  margin-bottom: 4rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.main-section:last-child {
+  border-bottom: none;
+}
+
+.main-section header {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: var(--text);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid var(--accent);
+  display: inline-block;
+}
+
+.main-section p {
+  margin-bottom: 0.85rem;
+  color: #333;
+  font-size: 0.97rem;
+}
+
+code {
+  display: block;
+  background: var(--code-bg);
+  border-left: 4px solid var(--accent);
+  padding: 0.6rem 1rem;}
+
+  @media (max-width: 768px) {
+  #navbar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+
+  #main-doc {
+    margin-left: 0;
+    padding: 1.5rem;
+  }
+
+  body {
+    flex-direction: column;
+  }
+}

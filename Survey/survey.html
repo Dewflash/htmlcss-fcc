@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NUS Student Experience Survey</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="surveystyles.css" />
+</head>
+<body>
+
+  <div class="page">
+
+    <header>
+      <div class="nus-bar"></div>
+      <div class="header-inner">
+        <div class="nus-logo">NUS</div>
+        <div>
+          <h1 id="title">Student Experience Survey</h1>
+          <p id="description">Help the National University of Singapore improve campus life, academic support, and student wellbeing. This survey takes approximately 3 minutes to complete.</p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <form id="survey-form">
+
+        <!-- Name -->
+        <div class="field">
+          <label id="name-label" for="name">Full Name <span class="req">*</span></label>
+          <input type="text" id="name" name="name" placeholder="e.g. Tan Wei Ming" required />
+        </div>
+
+        <!-- Email -->
+        <div class="field">
+          <label id="email-label" for="email">NUS Email Address <span class="req">*</span></label>
+          <input type="email" id="email" name="email" placeholder="e.g. e1234567@u.nus.edu" required />
+        </div>
+
+        <!-- Student ID number -->
+        <div class="field">
+          <label id="number-label" for="number">Student Number (e-prefix digits only)</label>
+          <input type="number" id="number" name="student-number" placeholder="e.g. 1234567" min="1000000" max="9999999" />
+        </div>
+
+        <!-- Faculty dropdown -->
+        <div class="field">
+          <label for="dropdown">Faculty / School</label>
+          <select id="dropdown" name="faculty">
+            <option value="" disabled selected>Select your faculty</option>
+            <option value="fos">Faculty of Science</option>
+            <option value="foe">Faculty of Engineering</option>
+            <option value="fass">Faculty of Arts & Social Sciences</option>
+            <option value="biz">NUS Business School</option>
+            <option value="soc">School of Computing</option>
+            <option value="law">Faculty of Law</option>
+            <option value="med">Yong Siew Toh Conservatory / Medicine</option>
+            <option value="design">College of Design & Engineering</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <!-- Radio — year of study -->
+        <div class="field">
+          <label class="group-label">Year of Study</label>
+          <div class="radio-group">
+            <label class="opt-label">
+              <input type="radio" name="year" value="year1" />
+              Year 1
+            </label>
+            <label class="opt-label">
+              <input type="radio" name="year" value="year2" />
+              Year 2
+            </label>
+            <label class="opt-label">
+              <input type="radio" name="year" value="year3" />
+              Year 3
+            </label>
+            <label class="opt-label">
+              <input type="radio" name="year" value="year4" />
+              Year 4 +
+            </label>
+            <label class="opt-label">
+              <input type="radio" name="year" value="postgrad" />
+              Postgraduate
+            </label>
+          </div>
+        </div>
+
+        <!-- Checkboxes — campus services used -->
+        <div class="field">
+          <label class="group-label">Which campus services have you used this semester? (Select all that apply)</label>
+          <div class="check-group">
+            <label class="opt-label">
+              <input type="checkbox" name="services" value="library" />
+              NUS Libraries
+            </label>
+            <label class="opt-label">
+              <input type="checkbox" name="services" value="usc" />
+              University Sports Centre
+            </label>
+            <label class="opt-label">
+              <input type="checkbox" name="services" value="ucs" />
+              University Counselling Service
+            </label>
+            <label class="opt-label">
+              <input type="checkbox" name="services" value="career" />
+              Centre for Future-Ready Graduates
+            </label>
+            <label class="opt-label">
+              <input type="checkbox" name="services" value="nus-health" />
+              University Health Centre
+            </label>
+            <label class="opt-label">
+              <input type="checkbox" name="services" value="housing" />
+              Campus Housing / Residential Colleges
+            </label>
+          </div>
+        </div>
+
+        <!-- Textarea -->
+        <div class="field">
+          <label for="comments">Any feedback or suggestions for NUS?</label>
+          <textarea id="comments" name="comments" rows="5" placeholder="Share any thoughts on academic support, campus facilities, student life, or anything else…"></textarea>
+        </div>
+
+        <!-- Submit -->
+        <div class="submit-wrap">
+          <button type="submit" id="submit">Submit Survey</button>
+          <p class="note">Your responses are anonymous and will only be used to improve the student experience at NUS.</p>
+        </div>
+
+      </form>
+    </main>
+
+    <footer>
+      <p>© National University of Singapore &nbsp;·&nbsp; Office of Student Affairs</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>

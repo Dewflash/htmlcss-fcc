@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brewed — Specialty Coffee</title>
+  <link rel="stylesheet" href="productstyles.css" />
+</head>
+<body>
+
+  <header id="header">
+    <div class="header-inner">
+      <div class="logo">
+        <img
+          id="header-img"
+          src="https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG"
+          alt="Brewed Coffee Logo"
+        />
+        <span>Brewed</span>
+      </div>
+      <nav id="nav-bar">
+        <a class="nav-link" href="#features">Features</a>
+        <a class="nav-link" href="#video-section">Watch</a>
+        <a class="nav-link" href="#order">Order</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Coffee worth waking up for.</h1>
+    <p>Single-origin beans. Roasted to order. Delivered to your door.</p>
+    <a href="#order" class="cta-btn">Get Started</a>
+  </section>
+
+  <section id="features">
+    <h2>Why Brewed?</h2>
+    <div class="features-grid">
+      <div class="feature">
+        <div class="feature-icon">☕</div>
+        <h3>Single Origin</h3>
+        <p>Every bag is sourced from a single farm so you taste exactly where your coffee comes from.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🔥</div>
+        <h3>Roasted Fresh</h3>
+        <p>We roast only after you order. No sitting on shelves for months losing flavour.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">📦</div>
+        <h3>Free Delivery</h3>
+        <p>Free shipping on every order, every time. No minimum spend, no surprises at checkout.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="video-section">
+    <h2>See how it's made</h2>
+    <iframe
+      id="video"
+      src="https://www.youtube.com/embed/ZE_5DgBb5aQ"
+      title="Coffee roasting process"
+      allowfullscreen
+    ></iframe>
+  </section>
+
+  <section id="order">
+    <h2>Start your subscription</h2>
+    <p>Enter your email and we'll send you our starter guide and first-order discount.</p>
+    <form id="form" action="https://www.freecodecamp.org/email-submit">
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Enter your email address"
+        required
+      />
+      <input type="submit" id="submit" value="Get the Guide" />
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2026 Brewed Coffee Co. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

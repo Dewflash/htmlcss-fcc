@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kevin Yong — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Star canvas -->
+  <canvas id="stars"></canvas>
+
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="nav-logo">KY</div>
+    <div class="nav-links">
+      <a href="#welcome-section">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certs</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero / Welcome -->
+  <section id="welcome-section">
+    <div class="hero-content">
+      <p class="hero-sub">Hello, I'm</p>
+      <h1>Kevin Yong</h1>
+      <p class="hero-typed"><span id="typed"></span><span class="cursor">|</span></p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary">View My Work</a>
+        <a id="profile-link" href="https://github.com/Dewflash" target="_blank" class="btn-ghost">GitHub ↗</a>
+      </div>
+    </div>
+    <div class="scroll-hint">scroll</div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="section-header reveal">
+      <span class="section-tag">/ projects</span>
+      <h2>Things I've Built</h2>
+    </div>
+    <div class="projects-grid">
+
+      <a href="https://github.com/Dewflash" target="_blank" class="project-tile reveal">
+        <div class="tile-glow"></div>
+        <div class="tile-tag">JavaScript · CSS</div>
+        <h3>Birthday Project</h3>
+        <p>A personalised birthday experience built with interactive animations and surprise elements — crafted with love in the browser.</p>
+        <span class="tile-link">View on GitHub ↗</span>
+      </a>
+
+      <a href="https://github.com/Dewflash" target="_blank" class="project-tile reveal">
+        <div class="tile-glow"></div>
+        <div class="tile-tag">Full Stack · Productivity</div>
+        <h3>Liveling</h3>
+        <p>A personal productivity app built to track habits, goals, and daily progress. Runs locally with a clean, distraction-free interface.</p>
+        <span class="tile-link">View on GitHub ↗</span>
+      </a>
+
+      <a href="https://github.com/Dewflash" target="_blank" class="project-tile reveal">
+        <div class="tile-glow"></div>
+        <div class="tile-tag">Writing · Web</div>
+        <h3>Travel Blog</h3>
+        <p>A personal blog concept for documenting travels, observations, and stories from around the world. Currently in development.</p>
+        <span class="tile-link">View on GitHub ↗</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section id="certifications">
+    <div class="section-header reveal">
+      <span class="section-tag">/ certifications</span>
+      <h2>Credentials</h2>
+    </div>
+    <div class="certs-grid">
+      <div class="cert-card reveal">
+        <div class="cert-icon">◈</div>
+        <div>
+          <h4>Responsive Web Design</h4>
+          <p>freeCodeCamp — 2025</p>
+        </div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-icon">◈</div>
+        <div>
+          <h4>JavaScript Algorithms & Data Structures</h4>
+          <p>freeCodeCamp — In Progress</p>
+        </div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-icon">◈</div>
+        <div>
+          <h4>LinkedIn Profile</h4>
+          <p><a href="https://www.linkedin.com/in/kevin-y-21b966326" target="_blank">kevin-y-21b966326 ↗</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="contact-inner reveal">
+      <span class="section-tag">/ contact</span>
+      <h2>Let's Connect</h2>
+      <p>Whether it's a project, opportunity, or just a hello — feel free to reach out.</p>
+      <div class="contact-links">
+        <a href="https://github.com/Dewflash" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/kevin-y-21b966326" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Built by Kevin Yong &nbsp;·&nbsp; 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
